@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:hovering/hovering.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -15,38 +16,36 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              child: Icon(
-                Icons.person_pin,
-                color: Colors.white,
-                size: 30,
-              ),
+              height: 25,
+              width: 25,
+              child: SvgPicture.asset("son.svg"),
             ),
             SizedBox(
               width: 5,
             ),
-            GestureDetector(
-              onTap: null,
+            HoverButton(
+              onpressed: null,
               child: Text(
                 "About Me",
                 style: GoogleFonts.mcLaren(
-                  color: Colors.white,
                   fontSize: 25,
+                  color: Colors.white,
                 ),
               ),
             ),
             SizedBox(
               width: 100,
             ),
-            Icon(
-              Icons.book_outlined,
-              color: Colors.white,
-              size: 30,
+            Container(
+              height: 25,
+              width: 25,
+              child: SvgPicture.asset("project.svg"),
             ),
             SizedBox(
               width: 5,
             ),
-            GestureDetector(
-              onTap: null,
+            HoverButton(
+              onpressed: null,
               child: Text(
                 "Projects",
                 style: GoogleFonts.mcLaren(
@@ -78,17 +77,17 @@ class HomePage extends StatelessWidget {
                 ),
                 Text(
                   "Shashwat Sharma",
-                  style: GoogleFonts.mcLaren(
-                    fontSize: 50,
-                    color: Colors.white,
-                  ),
+                  style: GoogleFonts.dancingScript(
+                      fontSize: 50,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 Text(
                   "Flutter.Cricket.Football.Music.\n Likes Travelling..",
-                  style: TextStyle(
+                  style: GoogleFonts.indieFlower(
                     fontSize: 30,
                     color: Colors.white,
                   ),
@@ -109,15 +108,18 @@ class HomePage extends StatelessWidget {
                     SizedBox(
                       width: 5,
                     ),
-                    RichText(
-                      text: new TextSpan(
-                        text: "Github",
-                        style: GoogleFonts.mcLaren(
-                            color: Colors.white, fontSize: 20),
-                        recognizer: new TapGestureRecognizer()
-                          ..onTap = () {
-                            launch("https://github.com/shashwat2910");
-                          },
+                    HoverButton(
+                      onpressed: null,
+                      child: RichText(
+                        text: new TextSpan(
+                          text: "Github",
+                          style: GoogleFonts.mcLaren(
+                              color: Colors.white, fontSize: 20),
+                          recognizer: new TapGestureRecognizer()
+                            ..onTap = () {
+                              launch("https://github.com/shashwat2910");
+                            },
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -131,16 +133,19 @@ class HomePage extends StatelessWidget {
                     SizedBox(
                       width: 5,
                     ),
-                    RichText(
-                      text: new TextSpan(
-                        text: "LinkedIn",
-                        style: GoogleFonts.mcLaren(
-                            color: Colors.white, fontSize: 20),
-                        recognizer: new TapGestureRecognizer()
-                          ..onTap = () {
-                            launch(
-                                "https://www.linkedin.com/in/shashwat-sharma-79221218a/");
-                          },
+                    HoverButton(
+                      onpressed: null,
+                      child: RichText(
+                        text: new TextSpan(
+                          text: "LinkedIn",
+                          style: GoogleFonts.mcLaren(
+                              color: Colors.white, fontSize: 20),
+                          recognizer: new TapGestureRecognizer()
+                            ..onTap = () {
+                              launch(
+                                  "https://www.linkedin.com/in/shashwat-sharma-79221218a/");
+                            },
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -154,15 +159,18 @@ class HomePage extends StatelessWidget {
                     SizedBox(
                       width: 5,
                     ),
-                    RichText(
-                      text: new TextSpan(
-                        text: "Twitter",
-                        style: GoogleFonts.mcLaren(
-                            color: Colors.white, fontSize: 20),
-                        recognizer: new TapGestureRecognizer()
-                          ..onTap = () {
-                            launch("https://twitter.com/prada_shawarma_");
-                          },
+                    HoverButton(
+                      onpressed: null,
+                      child: RichText(
+                        text: new TextSpan(
+                          text: "Twitter",
+                          style: GoogleFonts.mcLaren(
+                              color: Colors.white, fontSize: 20),
+                          recognizer: new TapGestureRecognizer()
+                            ..onTap = () {
+                              launch("https://twitter.com/prada_shawarma_");
+                            },
+                        ),
                       ),
                     ),
                   ],
@@ -182,16 +190,19 @@ class HomePage extends StatelessWidget {
                     SizedBox(
                       width: 5,
                     ),
-                    RichText(
-                      text: new TextSpan(
-                        text: "Facebook",
-                        style: GoogleFonts.mcLaren(
-                            color: Colors.white, fontSize: 20),
-                        recognizer: new TapGestureRecognizer()
-                          ..onTap = () {
-                            launch(
-                                "https://www.facebook.com/shashwat.sharma.100046/");
-                          },
+                    HoverButton(
+                      onpressed: null,
+                      child: RichText(
+                        text: new TextSpan(
+                          text: "Facebook",
+                          style: GoogleFonts.mcLaren(
+                              color: Colors.white, fontSize: 20),
+                          recognizer: new TapGestureRecognizer()
+                            ..onTap = () {
+                              launch(
+                                  "https://www.facebook.com/shashwat.sharma.100046/");
+                            },
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -205,15 +216,19 @@ class HomePage extends StatelessWidget {
                     SizedBox(
                       width: 5,
                     ),
-                    RichText(
-                      text: new TextSpan(
-                        text: "Instagram",
-                        style: GoogleFonts.mcLaren(
-                            color: Colors.white, fontSize: 20),
-                        recognizer: new TapGestureRecognizer()
-                          ..onTap = () {
-                            launch("https://www.instagram.com/oreo_shawarma_/");
-                          },
+                    HoverButton(
+                      onpressed: null,
+                      child: RichText(
+                        text: new TextSpan(
+                          text: "Instagram",
+                          style: GoogleFonts.mcLaren(
+                              color: Colors.white, fontSize: 20),
+                          recognizer: new TapGestureRecognizer()
+                            ..onTap = () {
+                              launch(
+                                  "https://www.instagram.com/oreo_shawarma_/");
+                            },
+                        ),
                       ),
                     ),
                   ],
