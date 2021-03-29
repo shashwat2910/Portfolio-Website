@@ -1,5 +1,4 @@
-import 'dart:html';
-
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -105,7 +104,7 @@ class HomePage extends StatelessWidget {
                     Container(
                       height: 20,
                       width: 20,
-                      child: Image.asset("assets/github.png"),
+                      child: SvgPicture.asset("github.svg"),
                     ),
                     SizedBox(
                       width: 5,
@@ -127,7 +126,7 @@ class HomePage extends StatelessWidget {
                     Container(
                       height: 20,
                       width: 20,
-                      child: Image.asset("assets/linkedin.png"),
+                      child: SvgPicture.asset("linkedin.svg"),
                     ),
                     SizedBox(
                       width: 5,
@@ -150,7 +149,7 @@ class HomePage extends StatelessWidget {
                     Container(
                       height: 20,
                       width: 20,
-                      child: Image.asset("assets/twitter.png"),
+                      child: SvgPicture.asset("twitter.svg"),
                     ),
                     SizedBox(
                       width: 5,
@@ -178,7 +177,7 @@ class HomePage extends StatelessWidget {
                     Container(
                       height: 20,
                       width: 20,
-                      child: Image.asset("assets/facebook.png"),
+                      child: SvgPicture.asset("facebook.svg"),
                     ),
                     SizedBox(
                       width: 5,
@@ -201,7 +200,7 @@ class HomePage extends StatelessWidget {
                     Container(
                       height: 20,
                       width: 20,
-                      child: Image.asset("assets/instagram.png"),
+                      child: SvgPicture.asset("instagram.svg"),
                     ),
                     SizedBox(
                       width: 5,
