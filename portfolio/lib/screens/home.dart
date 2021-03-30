@@ -2,8 +2,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/screens/about_me.dart';
-import 'package:portfolio/screens/projects.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:hovering/hovering.dart';
 
@@ -11,69 +9,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomAppBar(
-        color: Color(0xFF191D20),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              height: 25,
-              width: 25,
-              child: SvgPicture.asset("son.svg"),
-            ),
-            SizedBox(
-              width: 5,
-            ),
-            HoverButton(
-              onpressed: () => Navigator.push(
-                context,
-                MaterialPageRoute<void>(
-                  builder: (context) => AboutSection(),
-                ),
-              ),
-              child: Text(
-                "About Me",
-                style: GoogleFonts.mcLaren(
-                  fontSize: 25,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 100,
-            ),
-            Container(
-              height: 25,
-              width: 25,
-              child: SvgPicture.asset("project.svg"),
-            ),
-            SizedBox(
-              width: 5,
-            ),
-            HoverButton(
-              onpressed: () => Navigator.push(
-                context,
-                MaterialPageRoute<void>(
-                  builder: (context) => ProjectsInfo(),
-                ),
-              ),
-              child: Text(
-                "Projects",
-                style: GoogleFonts.mcLaren(
-                  color: Colors.white,
-                  fontSize: 25,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-      backgroundColor: Colors.black,
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("bg.jpg"),
+            image: AssetImage("bgtry.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -84,6 +23,7 @@ class HomePage extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(top: 200),
                 child: CircleAvatar(
+                  backgroundColor: Color(0xFF252525),
                   radius: 150,
                   backgroundImage: AssetImage("try.png"),
                 ),
